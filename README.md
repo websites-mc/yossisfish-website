@@ -1,24 +1,8 @@
-# yossisfish.com
+# Yossi's Fish website
 
-Static website for **Yossi's Fish** (Yossis Fish Market), 5324 13th Ave, Brooklyn, NY 11219.
+All files sit at the top level (no folders), so you can drag them all into a GitHub upload.
 
-## Pages
-| URL | Purpose |
-|---|---|
-| `/` | Home |
-| `/sms/` | Text message program: opt-in form (2 unchecked checkboxes), keyword JOIN, program disclosures |
-| `/contact/` | Contact Us |
-| `/privacy-policy/` | Privacy Policy (with SMS section) |
-| `/terms-of-service/` | Terms of Service (with SMS program terms) |
+Pages: index.html, sms.html (text message program / opt-in), contact.html, privacy-policy.html, terms-of-service.html
 
-## Deploy (GitHub Pages)
-1. Create a repo and upload the contents of this folder to the root (not inside a subfolder).
-2. Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
-3. Custom domain is already set via the `CNAME` file (`yossisfish.com`). At Namecheap, add:
-   - A records for `@` → 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
-   - CNAME record `www` → `<your-github-username>.github.io`
-4. Once DNS resolves, tick **Enforce HTTPS**.
-
-## Forms
-Forms validate in the browser and show a success message. To actually receive submissions,
-set `FORM_ENDPOINT` at the top of `assets/main.js` (e.g. a Formspree URL).
+Custom domain: once DNS for yossisfish.com points to GitHub, go to Settings → Pages → Custom domain → yossisfish.com, then Enforce HTTPS.
+Namecheap DNS: A records @ → 185.199.108.153 / .109.153 / .110.153 / .111.153, CNAME www → websites-mc.github.io
